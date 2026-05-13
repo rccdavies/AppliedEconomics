@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fbf7ef;
+  --foreground: #18181b;
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(
+      circle at top,
+      rgba(251, 191, 36, 0.12),
+      transparent 55%
+    ),
+    var(--background);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+a {
+  color: inherit;
+}
