@@ -8,7 +8,8 @@ const parser = new Parser({
     "User-Agent": FEED_USER_AGENT,
     Accept: "application/rss+xml, application/xml, text/xml, */*",
   },
-  timeout: 12000,
+  // Keep below ~8s so parallel fetches stay inside Vercel Hobby ~10s function limit.
+  timeout: 8000,
 });
 
 function articleId(parts: string[]): string {
